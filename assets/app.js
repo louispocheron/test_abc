@@ -1,4 +1,7 @@
-var a = document.querySelectorAll(".navbar li a");
+
+
+
+let a = document.querySelectorAll(".navbar li a");
 for (let i = 0, length = a.length; i < length; i++) {
   a[i].onclick = function() {
     var b = document.querySelector(".navbar li.active");
@@ -7,12 +10,12 @@ for (let i = 0, length = a.length; i < length; i++) {
   };
 }
 
+
 // Color palette variables
 let dark = '#252525';
 let mid = '#888';
 let light = 'rgba(255, 255, 255, 0.4)';
 
-// Add scrollmagic controller
 let controller = new ScrollMagic.Controller({
   addIndicators: true
 });
@@ -22,7 +25,7 @@ let controller = new ScrollMagic.Controller({
 // Add timeline
 let tl2 = anime.timeline({
   autoplay: false
-});
+}); 
 
 // NAIMATION MOCKUP MCBOOK 
 let s2a1 = {
@@ -68,6 +71,37 @@ let scene2 = new ScrollMagic.Scene({
 
 .setPin('#two')
 .addTo(controller);
+
+
+const test = new Letterize({
+        targets: ".animate-me"
+      });
+
+      const animation = anime.timeline({
+        targets: test.listAll,
+        delay: anime.stagger(100, {
+          grid: [test.list[0].length, test.list.length],
+          from: "center"
+        }),
+        loop: false
+      });
+
+      animation
+        .add({
+          scale: 0.5
+        })
+        .add({
+          letterSpacing: "10px"
+        })
+        .add({
+          scale: 1
+        })
+        .add({
+          opacity: [1, 0.5, 0]
+        })
+        .add({
+          letterSpacing: "6px"
+        });
 
 
 

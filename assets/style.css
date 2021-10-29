@@ -1,5 +1,8 @@
+@font-face {
+  font-family: myfont;
+  src: url(font/Poppins-Black.ttf);
+}
 body {
-    padding-top: 56px;
     font-weight: 300;
     letter-spacing: 0.03em;
     background-color: #f7f7f7;
@@ -9,29 +12,30 @@ body {
   }
   .section1{
     background-attachment: fixed;
+    background: #212121;
   }
-  
-  nav.navbar {
-    border-bottom: solid 1px #d6d6d6;
-  }
-  
-  .navbar .navbar-brand {
-    font-weight: 500;
-    letter-spacing: .065em;
-  }
-  
-  
-  .navbar-nav .nav-link {
-      letter-spacing: .035em;
-  }
-  
-  .navbar li.active a {
-    font-weight: 400;
-  }
-  
   main.container-fluid {
     padding-left: 0;
     padding-right: 0;
+  }
+  .containerimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .containerimg h1{
+    z-index: 0;
+    font-family: myfont;
+    font-size: 4rem;  
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: white;
+    position: absolute;
+    top: 50%;
+  }
+  .containerimg img{
+    z-index: 1;
   }
   
   .spacer {
@@ -39,16 +43,24 @@ body {
   }
   
   .rectangle {
-    position: absolute;
-    width: 97vw;
-    height: 30vw;
+    font-family: myfont;
+    text-align: center;
+    color: white;
+    font-weight: 100;
+    width: 90vw;
+    height: 70vw;
     border-radius: 10px;
     background: linear-gradient(45deg, #69b7bf 25%, #ffe664);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   @media (min-width: 500px) {
     .rectangle {
       width: 80%;
+      height: 25rem;
+      font-size: 2rem;
     }
   }
   
@@ -78,6 +90,9 @@ body {
   
   #one {
     background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   #one .elem {
@@ -115,9 +130,12 @@ body {
   #two {
     height: auto;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 3vw 15vw 10vw;
     background-attachment: fixed;
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    background: radial-gradient(circle, rgb(122, 99, 109) 0%, rgba(148,187,233,1) 100%);
   }
   
   #three, #four {
